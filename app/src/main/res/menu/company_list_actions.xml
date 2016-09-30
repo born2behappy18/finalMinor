@@ -15,5 +15,11 @@
         android:title="@string/action_filter"
         app:showAsAction="ifRoom" />
 
+    <item android:id="@+id/action_account"
+        android:icon="@drawable/account"
+        android:title="@string/action_account"
+        app:showAsAction="ifRoom" />
+
+
 
 </menu>

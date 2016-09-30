@@ -3,4 +3,5 @@
     <string name="action_search">Action Search</string>
     <string name="action_filter">Action Filter</string>
     <string name="search_hint">Search Hint</string>
+    <string name="action_account">Action Account</string>
 </resources>
