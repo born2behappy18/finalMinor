@@ -28,25 +28,71 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@mipmap/ic_launcher"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/company_logo"
                     android:id="@+id/imageView"
-                    android:layout_weight="0.43" />
+                    />
 
-                <TextView
-                    android:text="AMAZON"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/CL"
-                    android:layout_weight="1" />
+                    android:orientation="vertical"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:text="AMAZON"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/CL"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Software Developer"
+                    android:layout_marginLeft="30dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delhi"
+                        android:layout_marginLeft="30dp"/>
+                </LinearLayout>
+
+
+
             </LinearLayout>
 
             <TextView
-                android:text="TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView3" />
+                android:layout_margin="20dp"
+                android:id="@+id/textView3"
+                android:text="We're a company of pioneers. It's our job to make bold bets, and we get our energy from inventing on behalf of customers. Success is measured against the possible, not the probable. For today’s pioneers, that’s exactly why there’s no place on Earth they’d rather build than Amazon."
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Recruitment Process :
+
+Round 1 : Aptitude and Technical (Objective)
+
+    Medium : Offline (Paper/Pen)
+    Type : Elimination Round
+
+Round 2 : Technical Subjective
+
+    Medium : Offline (Paper/Pen)
+    Type : Elimination Round
+
+Round 3 : Interviews - Technical and HR"/>
 
 
 
@@ -56,13 +102,15 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="bottom">
+        android:gravity="bottom"
+        android:backgroundTint="@color/colorPrimaryDark">
         <Button
             android:text="APPLY"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button"
-            android:gravity="bottom"/>
+            android:id="@+id/apply_now_btn"
+            android:layout_marginTop="10dp"
+            />
     </RelativeLayout>
 </RelativeLayout>
 

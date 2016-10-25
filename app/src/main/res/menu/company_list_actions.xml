@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Search / will display always -->
+    <item android:id="@+id/action_search"
+        android:icon="@drawable/magnify"
+        android:title="@string/action_search"
+        app:showAsAction="ifRoom"
+        app:actionViewClass="android.support.v7.widget.SearchView"/>
+
+    <!-- Location Found -->
+    <item android:id="@+id/action_filter"
+        android:icon="@drawable/filter"
+        android:title="@string/action_filter"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_account"
+        android:icon="@drawable/account"
+        android:title="@string/action_account"
+        app:showAsAction="ifRoom" />
+
+
+
+</menu>
