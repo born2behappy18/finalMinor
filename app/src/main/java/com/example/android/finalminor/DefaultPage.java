@@ -84,7 +84,7 @@ public class DefaultPage extends AppCompatActivity {
     }
 
     private void AccountAction() {
-        Intent i = new Intent(DefaultPage.this, AccountAction.class);
+        Intent i = new Intent(DefaultPage.this, AccountMenu.class);
         startActivity(i);
     }
 }

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<EditText
+    android:id="@+id/old_email"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Old E-mail Address"
+    android:inputType="textEmailAddress"
+    android:maxLines="1"/>
+
+<EditText
+    android:id="@+id/new_email"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="New E-mail address"
+    android:inputType="textEmailAddress"
+    android:maxLines="1"
+    android:singleLine="true" />
+
+<EditText
+    android:id="@+id/password"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:hint="old password"
+    android:imeOptions="actionUnspecified"
+    android:inputType="textPassword"
+    android:maxLines="1" />
+
+<EditText
+    android:id="@+id/newPassword"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:hint="new password"
+    android:imeOptions="actionUnspecified"
+    android:inputType="textPassword"
+    android:maxLines="1"/>
+
+<Button
+    android:id="@+id/changeEmail"
+    style="?android:textAppearanceSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@color/colorPrimaryDark"
+    android:text="CHANGE EMAIL"
+    android:textColor="@android:color/white"
+    android:textStyle="bold" />
+
+<Button
+    android:id="@+id/changePass"
+    style="?android:textAppearanceSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@color/colorPrimaryDark"
+    android:text="CHANGE PASSWORD"
+    android:textColor="@android:color/white"
+    android:textStyle="bold" />
+
+<Button
+    android:id="@+id/send"
+    style="?android:textAppearanceSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@color/colorPrimaryDark"
+    android:text="PASSWORD RESET EMAIL"
+    android:textColor="@android:color/white"
+    android:textStyle="bold" />
+
+<ProgressBar
+    android:id="@+id/progressBar"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:visibility="gone" />
+
+<Button
+    android:id="@+id/remove"
+    style="?android:textAppearanceSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@color/colorPrimaryDark"
+    android:text="Remove Account"
+    android:textColor="@android:color/white"
+    android:textStyle="bold" />
+
+<Button
+    android:id="@+id/change_email_button"
+    style="?android:textAppearanceSmall"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:text="CHANGE E-MAIL"
+    android:textStyle="bold" />
+
+<Button
+    android:id="@+id/change_password_button"
+    style="?android:textAppearanceSmall"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:text="CHANGE PASSWORD"
+    android:textStyle="bold" />
+
+<Button
+    android:id="@+id/sending_pass_reset_button"
+    style="?android:textAppearanceSmall"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:text="SEND PASSWORD RESET EMAIL"
+    android:textStyle="bold" />
+
+<Button
+    android:id="@+id/remove_user_button"
+    style="?android:textAppearanceSmall"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:text="REMOVE USER"
+    android:textStyle="bold" />
+
+<Button
+    android:id="@+id/sign_out"
+    style="?android:textAppearanceSmall"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@color/colorPrimary"
+    android:text="SIGN OUT"
+    android:textColor="@android:color/white"
+    android:textStyle="bold" />
+
+</LinearLayout>

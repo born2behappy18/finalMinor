@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.finalminor">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -38,9 +39,12 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".PreparationTest"></activity>
         <activity android:name=".ApplyForm"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".ResetPasswordActivity"></activity>
         <activity android:name=".AccountAction"></activity>
-
-
+        <activity android:name=".AccountMenu"></activity>
+        <activity android:name=".UserProfile"></activity>
     </application>
 
 </manifest>
