@@ -18,7 +18,7 @@ public class CompanyApply extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.company_apply_fill);
+        setContentView(R.layout.activity_main);
 
         mApplyBtn = (Button) findViewById(R.id.apply_btn);
         mApplyBtn.setOnClickListener(new View.OnClickListener() {

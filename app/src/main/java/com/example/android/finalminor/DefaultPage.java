@@ -28,8 +28,20 @@ import com.google.firebase.database.FirebaseDatabase;
  */
 public class DefaultPage extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
-    private CompanyAdapter mAdapter;
+    TextView mAmazonBtn;
+    Button mAmazonApplyBtn;
+    Button mLinkedInApplyBtn;
+    Button mSopraApplyBtn;
+    Button mHclApplyBtn;
+    Button mInfosysApplyBtn;
+    Button mTcsApplyBtn;
+    Button mWiproApplyBtn;
+    Button mCognizantApplyBtn;
+    Button mAccentureApplyBtn;
+    Button mFacebookApplyBtn;
+
+//    private RecyclerView recyclerView;
+//    private CompanyAdapter mAdapter;
     private FirebaseAuth mFirebaseAuth;
     private FirebaseUser mFirebaseUser;
 
@@ -52,13 +64,114 @@ public class DefaultPage extends AppCompatActivity {
 
         setContentView(R.layout.company_list);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mAmazonBtn = (TextView) findViewById(R.id.amazon_btn);
 
-        mAdapter = new CompanyAdapter();
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(mAdapter);
+        mAmazonBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), MainActivity.class);
+                view.getContext().startActivity(i);
+            }
+        });
+
+        mAmazonApplyBtn = (Button) findViewById(R.id.amazon_apply_now_btn);
+        mAmazonApplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), MainActivity.class);
+                view.getContext().startActivity(i);
+            }
+        });
+
+        mLinkedInApplyBtn = (Button) findViewById(R.id.linkedin_apply_now_btn);
+        mSopraApplyBtn = (Button) findViewById(R.id.sopra_apply_now_btn);
+        mHclApplyBtn = (Button) findViewById(R.id.hcl_apply_now_btn);
+        mInfosysApplyBtn = (Button) findViewById(R.id.infosys_apply_now_btn);
+        mTcsApplyBtn = (Button) findViewById(R.id.tcs_apply_now_btn);
+        mWiproApplyBtn = (Button) findViewById(R.id.wipro_apply_now_btn);
+        mCognizantApplyBtn = (Button) findViewById(R.id.cognizant_apply_now_btn);
+        mAccentureApplyBtn = (Button) findViewById(R.id.accenture_apply_now_btn);
+        mFacebookApplyBtn = (Button) findViewById(R.id.facebook_apply_now_btn);
+
+        mLinkedInApplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), LinkedIn.class);
+                view.getContext().startActivity(i);
+            }
+        });
+
+        mSopraApplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), Sopra.class);
+                view.getContext().startActivity(i);
+            }
+        });
+
+        mHclApplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), HCL.class);
+                view.getContext().startActivity(i);
+            }
+        });
+
+        mInfosysApplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), Infosys.class);
+                view.getContext().startActivity(i);
+            }
+        });
+
+        mTcsApplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), TCS.class);
+                view.getContext().startActivity(i);
+            }
+        });
+
+        mWiproApplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), Wipro.class);
+                view.getContext().startActivity(i);
+            }
+        });
+
+        mCognizantApplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), Cognizant.class);
+                view.getContext().startActivity(i);
+            }
+        });
+
+        mAccentureApplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), Accenture.class);
+                view.getContext().startActivity(i);
+            }
+        });
+
+        mFacebookApplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), Facebook.class);
+                view.getContext().startActivity(i);
+            }
+        });
+
+//        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+//
+//        mAdapter = new CompanyAdapter();
+//        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+//        recyclerView.setLayoutManager(mLayoutManager);
+//        recyclerView.setItemAnimator(new DefaultItemAnimator());
+//        recyclerView.setAdapter(mAdapter);
 
 
     }

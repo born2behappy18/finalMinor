@@ -45,6 +45,16 @@
         <activity android:name=".AccountAction"></activity>
         <activity android:name=".AccountMenu"></activity>
         <activity android:name=".UserProfile"></activity>
+        <activity android:name=".Accenture"></activity>
+        <activity android:name=".Cognizant"></activity>
+        <activity android:name=".Facebook"></activity>
+        <activity android:name=".HCL"></activity>
+        <activity android:name=".Infosys"></activity>
+        <activity android:name=".LinkedIn"></activity>
+        <activity android:name=".Sopra"></activity>
+        <activity android:name=".TCS"></activity>
+        <activity android:name=".Wipro"></activity>
+
     </application>
 
 </manifest>
