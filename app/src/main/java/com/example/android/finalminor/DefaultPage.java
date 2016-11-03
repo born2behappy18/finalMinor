@@ -1,5 +1,6 @@
 package com.example.android.finalminor;
 
+import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -22,6 +23,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
+import static android.R.attr.data;
+
 
 /**
  * Created by Ankur on 29/9/16.
@@ -34,6 +37,7 @@ public class DefaultPage extends AppCompatActivity {
     private FirebaseUser mFirebaseUser;
 
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,12 +47,15 @@ public class DefaultPage extends AppCompatActivity {
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
+
         if(mFirebaseUser == null){
             //not signed in. launch login
+            startActivity(new Intent(DefaultPage.this,StudentTeacher.class));
             startActivity(new Intent(this,AccountAction.class));
             finish();
             return;
         }
+
 
         setContentView(R.layout.company_list);
 
@@ -62,6 +69,8 @@ public class DefaultPage extends AppCompatActivity {
 
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

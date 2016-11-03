@@ -45,6 +45,8 @@
         <activity android:name=".AccountAction"></activity>
         <activity android:name=".AccountMenu"></activity>
         <activity android:name=".UserProfile"></activity>
+        <activity android:name=".StudentTeacher"></activity>
+
     </application>
 
 </manifest>

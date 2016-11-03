@@ -19,12 +19,12 @@ public class AccountMenu extends AppCompatActivity {
         Button userProf = (Button)findViewById(R.id.b_userProfile);
         Button userSett = (Button)findViewById(R.id.b_userSetting);
 
-        userProf.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AccountMenu.this, UserProfile.class));
-            }
-        });
+            userProf.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(AccountMenu.this, UserProfile.class));
+                }
+            });
 
         userSett.setOnClickListener(new View.OnClickListener() {
             @Override
