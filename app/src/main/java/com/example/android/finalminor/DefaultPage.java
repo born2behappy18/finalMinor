@@ -4,6 +4,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -17,18 +18,38 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 /**
- * Created by rajeev on 29/9/16.
+ * Created by Ankur on 29/9/16.
  */
 public class DefaultPage extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private CompanyAdapter mAdapter;
+    private FirebaseAuth mFirebaseAuth;
+    private FirebaseUser mFirebaseUser;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true); //for offline storing data
+
+
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirebaseUser = mFirebaseAuth.getCurrentUser();
+        if(mFirebaseUser == null){
+            //not signed in. launch login
+            startActivity(new Intent(this,AccountAction.class));
+            finish();
+            return;
+        }
+
         setContentView(R.layout.company_list);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
