@@ -7,7 +7,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
-        android:src="@drawable/company_logo"/>
+        android:src="@drawable/amazon"/>
 
     <LinearLayout
         android:layout_width="wrap_content"

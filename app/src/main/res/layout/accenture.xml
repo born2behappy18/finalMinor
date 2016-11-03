@@ -30,7 +30,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/amazon"
+                    android:src="@drawable/accenture"
                     android:id="@+id/imageView"
                     />
 
@@ -41,7 +41,7 @@
                     android:layout_margin="12dp">
 
                     <TextView
-                        android:text="AMAZON"
+                        android:text="Accenture"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/CL"
@@ -51,10 +51,10 @@
                         />
 
                     <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Software Developer"
-                    android:layout_marginLeft="30dp"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Software Developer"
+                        android:layout_marginLeft="30dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -82,17 +82,23 @@
                 android:layout_marginRight="20dp"
                 android:text="Recruitment Process :
 
-Round 1 : Aptitude and Technical (Objective)
+Round 1 :
+
+    Aptitude and Technical (Objective)
 
     Medium : Offline (Paper/Pen)
     Type : Elimination Round
 
-Round 2 : Technical Subjective
+Round 2 :
+
+    Technical Subjective
 
     Medium : Offline (Paper/Pen)
     Type : Elimination Round
 
-Round 3 : Interviews - Technical and HR"/>
+Round 3 :
+
+    Interviews - Technical and HR"/>
 
 
 

@@ -45,7 +45,19 @@
         <activity android:name=".AccountAction"></activity>
         <activity android:name=".AccountMenu"></activity>
         <activity android:name=".UserProfile"></activity>
+<<<<<<< HEAD
         <activity android:name=".StudentTeacher"></activity>
+=======
+        <activity android:name=".Accenture"></activity>
+        <activity android:name=".Cognizant"></activity>
+        <activity android:name=".Facebook"></activity>
+        <activity android:name=".HCL"></activity>
+        <activity android:name=".Infosys"></activity>
+        <activity android:name=".LinkedIn"></activity>
+        <activity android:name=".Sopra"></activity>
+        <activity android:name=".TCS"></activity>
+        <activity android:name=".Wipro"></activity>
+>>>>>>> e8b8b7c803d8e1fc48f761e13bcc3cdc54c223eb
 
     </application>
 
