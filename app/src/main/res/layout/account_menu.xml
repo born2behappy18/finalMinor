@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
-    <Button
+    <LinearLayout
+        android:id="@+id/alipay_login"
+        style="@style/loginType"
+        android:background="#27b" >
+
+        <Button
         android:text="User Profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:id="@+id/b_userProfile"
-        android:layout_marginTop="150dp"
-        android:layout_gravity="center"/>
+        android:background="#ef9a9a"
+            android:textSize="17dp" />
 
-    <Button
-        android:text="User Settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/b_userSetting"
-        android:layout_marginTop="60dp"
-        android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/taobao_login"
+        style="@style/loginType"
+        android:background="#ed6d00" >
+
+        <Button
+            android:text="User Setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/b_userSetting"
+            android:background="#e57373"
+            android:textSize="17dp" />
+
+    </LinearLayout>
+
 </LinearLayout>
