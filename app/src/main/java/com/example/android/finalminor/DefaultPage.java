@@ -17,6 +17,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -43,6 +46,53 @@ public class DefaultPage extends AppCompatActivity {
     Button mAccentureApplyBtn;
     Button mFacebookApplyBtn;
 
+
+
+
+    boolean amazonCriteria = true;
+    boolean linkedInCriteria = true;
+    boolean sopraCriteria = true;
+    boolean hclCriteria = false;
+    boolean infosysCriteria = false;
+    boolean tcsCriteria =true;
+    boolean wiproCriteria = true;
+    boolean cognizantCriteria = false;
+    boolean accentureCriteria = false;
+    boolean facebookCriteria = true;
+
+    boolean[] criteria;
+
+  //  int lpa;
+    int amazonlpa = 12;
+    int linkedInlpa = 5;
+    int sopralpa = 5;
+    int hcllpa = 2;
+    int infosyslpa = 4;
+    int tcslpa =4;
+    int wiprolpa = 5;
+    int cognizantlpa = 6;
+    int accenturelpa = 4;
+    int facebooklpa = 15;
+
+    int lpa[];
+
+    LinearLayout[] layout;
+
+
+    LinearLayout amazonlay;
+    LinearLayout linkedInlay;
+    LinearLayout sopralay;
+    LinearLayout hcllay;
+    LinearLayout infosyslay;
+    LinearLayout tcslay;
+    LinearLayout wiprolay;
+    LinearLayout cognizantlay;
+    LinearLayout accenturelay;
+    LinearLayout facebooklay;
+
+
+
+
 //    private RecyclerView recyclerView;
 //    private CompanyAdapter mAdapter;
     private FirebaseAuth mFirebaseAuth;
@@ -60,6 +110,9 @@ public class DefaultPage extends AppCompatActivity {
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
 
+
+
+
         if(mFirebaseUser == null){
             //not signed in. launch login
             startActivity(new Intent(DefaultPage.this,StudentTeacher.class));
@@ -70,6 +123,100 @@ public class DefaultPage extends AppCompatActivity {
 
 
         setContentView(R.layout.company_list);
+        Boolean merc = false;
+        Boolean lpaMerc1 = false;
+        Boolean lpaMerc2 = false;
+        Boolean lpaMerc3 = false;
+        Boolean lpaMerc4 = false;
+
+        Intent intent = getIntent();
+        merc = intent.getBooleanExtra("Merc",merc);
+        lpaMerc1 = intent.getBooleanExtra("lpaMerc1",lpaMerc1);
+        lpaMerc2 = intent.getBooleanExtra("lpaMerc2",lpaMerc2);
+        lpaMerc3 = intent.getBooleanExtra("lpaMerc3",lpaMerc3);
+        lpaMerc4 = intent.getBooleanExtra("lpaMerc4",lpaMerc4);
+
+
+        criteria = new boolean[10];
+        criteria[0] = amazonCriteria;
+        criteria[1] = linkedInCriteria;
+        criteria[2] = sopraCriteria;
+        criteria[3] = hclCriteria;
+        criteria[4] = infosysCriteria;
+        criteria[5] = tcsCriteria;
+        criteria[6] = wiproCriteria;
+        criteria[7] = cognizantCriteria;
+        criteria[8] = accentureCriteria;
+        criteria[9] = facebookCriteria;
+
+        lpa = new int[10];
+        lpa[0] = amazonlpa;
+        lpa[1] = linkedInlpa;
+        lpa[2] = sopralpa;
+        lpa[3] = hcllpa;
+        lpa[4] = infosyslpa;
+        lpa[5] = tcslpa;
+        lpa[6] = wiprolpa;
+        lpa[7] = cognizantlpa;
+        lpa[8] = accenturelpa;
+        lpa[9] = facebooklpa;
+
+        layout = new LinearLayout[10];
+
+        layout[0] = (LinearLayout) findViewById(R.id.amazon);
+        layout[1] = (LinearLayout) findViewById(R.id.linkedIn);
+        layout[2] = (LinearLayout) findViewById(R.id.sopra);
+        layout[3] = (LinearLayout) findViewById(R.id.hcl);
+        layout[4] = (LinearLayout) findViewById(R.id.infosys);
+        layout[5] = (LinearLayout) findViewById(R.id.tcs);
+        layout[6] = (LinearLayout) findViewById(R.id.wipro);
+        layout[7] = (LinearLayout) findViewById(R.id.cognizant);
+        layout[8] = (LinearLayout) findViewById(R.id.accenture);
+        layout[9] = (LinearLayout) findViewById(R.id.facebook);
+
+
+        if(merc==true){
+            for(int i=0;i<9;i++){
+                if(criteria[i]==false){
+                    layout[i].setVisibility(View.GONE);
+                }
+            }
+
+        }
+
+        if(lpaMerc1==true){
+            for(int i=0;i<9;i++){
+                if(lpa[i]>3){
+                    layout[i].setVisibility(View.GONE);
+                }
+            }
+        }
+
+        if(lpaMerc2==true){
+            for(int i=0;i<9;i++){
+                if(lpa[i]<=3 && lpa[i]>5){
+                    layout[i].setVisibility(View.GONE);
+                }
+            }
+        }
+
+        if(lpaMerc3==true){
+            for(int i=0;i<9;i++){
+                if(lpa[i]<=5 && lpa[i]>10){
+                    layout[i].setVisibility(View.GONE);
+                }
+            }
+        }
+
+        if(lpaMerc4==true){
+            for(int i=0;i<9;i++){
+                if(lpa[i]<=10){
+                    layout[i].setVisibility(View.GONE);
+                }
+            }
+        }
+
+
 
         mAmazonBtn = (TextView) findViewById(R.id.amazon_btn);
 

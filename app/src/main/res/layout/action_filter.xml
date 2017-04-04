@@ -1,12 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Filter Not Available . Under maintenance !"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_margin="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eligibility Criteria"/>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="More than 60%" />
+
+        <TextView
+            android:layout_margin="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Package Criteria"/>
+
+        <CheckBox
+            android:id="@+id/lpaCheckBox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Package Less than 3lpa" />
+
+        <CheckBox
+            android:id="@+id/lpaCheckBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Package between 3 - 5lpa" />
+
+        <CheckBox
+            android:id="@+id/lpaCheckBox3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Package between 5-10 lpa" />
+
+
+        <CheckBox
+            android:id="@+id/lpaCheckBox4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Package More than 10lpa" />
+
+        <TextView
+            android:layout_margin="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Location"/>
+        <CheckBox
+            android:id="@+id/delhi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NCR" />
+
+        <CheckBox
+            android:id="@+id/Banglore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Banglore" />
+
+        <CheckBox
+            android:id="@+id/hyderabad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hyderabad" />
+
+        <CheckBox
+            android:id="@+id/pune"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pune" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:layout_margin="20dp"
+        android:layout_gravity="center_horizontal"/>
+
 
 </LinearLayout>
